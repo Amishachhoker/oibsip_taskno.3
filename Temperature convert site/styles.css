@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #dfe6e9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #2d3436;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="number"] {
+    padding: 15px;
+    margin-bottom: 30px;
+    width: 80%;
+    border-radius: 8px;
+    border: 1px solid #dfe6e9;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    background: #f5f6fa;
+    color: #2d3436;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    background: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+label {
+    font-size: 18px;
+    color: #636e72;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #0984e3;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #0984e3;
+}
+
+button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0984e3;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #74b9ff;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d3436;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 80%;
+    background-color: #dfe6e9;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#result.show {
+    opacity: 1;
+}
